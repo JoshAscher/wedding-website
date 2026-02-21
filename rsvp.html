@@ -44,12 +44,30 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
+/* Guest boxes */
 .guest-box {
   border: 1px solid #e5d7c6;
   padding: 15px;
   margin: 15px 0;
   border-radius: 10px;
   background: #fffdf9;
+  max-width: 500px;       /* limit overall box width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Input, select, textarea inside guest boxes */
+.guest-box input,
+.guest-box select,
+.guest-box textarea {
+  width: 100%;             /* fill container width */
+  max-width: 400px;        /* don't let it be too wide */
+  box-sizing: border-box;  /* include padding/border in width */
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
 }
 
 label { display:block; margin-top:10px; }
