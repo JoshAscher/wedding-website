@@ -1,40 +1,3 @@
-
-
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RSVP – Josh & Julia</title>
-  <link rel="stylesheet" href="home.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="timeline.html">Weekend Timeline</a>
-      <a href="accommodation.html">Accommodation</a>
-      <a href="travel.html">How to Get There</a>
-      <a href="things-to-do.html">What to Do</a>
-      <a href="faq.html">FAQ</a>
-      <a href="registry.html">Registry</a>
-      <a href="rsvp.html">RSVP</a>
-    </nav>
-  </header>
-
-  <h1>RSVP</h1>
-    <p>Please let us know if you’ll be joining us!</p>
-    <iframe src="https://forms.gle/4ZwvoqkBDGZ3d8hm7"
-            width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
-  <footer>
-    <p>© 2026 Josh & Julia</p>
-  </footer>
-</body>
-</html>
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -111,18 +74,32 @@ button:hover { background:#8f6044; }
 
 <form id="rsvpForm">
 
-<label>How many people are attending?</label>
-<select id="numGuests" required>
-  <option value="">Select...</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="5">6</option>
-</select>
-
-<div id="guestFields"></div>
+  <label>Your Name</label>
+  <input type="text" id="mainGuestName" required>
+  
+  <label>Will you be attending?</label>
+  <div>
+    <input type="radio" name="attending" value="Yes" id="attendingYes" required>
+    <label for="attendingYes">Yes, we’ll attend</label>
+  </div>
+  <div>
+    <input type="radio" name="attending" value="No" id="attendingNo">
+    <label for="attendingNo">No, we cannot attend</label>
+  </div>
+  
+  <div id="guestSection" style="display:none;">
+    <label>How many people are attending?</label>
+    <select id="numGuests">
+      <option value="">Select...</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  
+    <div id="guestFields"></div>
+  </div>
 
 <button type="submit">Submit RSVP</button>
 
