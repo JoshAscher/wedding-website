@@ -73,28 +73,40 @@ button:hover { background:#8f6044; }
 <h1>RSVP</h1>
 
 <form id="rsvpForm">
+  <label>Your Name</label>
+  <input type="text" id="mainGuestName" required>
 
-  <label>How many people are attending?</label>
-  <select id="numGuests" required>
-    <option value="">Select...</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="5">6</option>
-  </select>
-  
-  <div id="guestFields"></div>
-  
+  <label>Will you be attending?</label>
+  <div>
+    <input type="radio" name="attending" value="Yes" id="attendingYes" required>
+    <label for="attendingYes">Yes, we’ll attend</label>
+  </div>
+  <div>
+    <input type="radio" name="attending" value="No" id="attendingNo">
+    <label for="attendingNo">No, we cannot attend</label>
+  </div>
+
+  <div id="guestSection" style="display:none;">
+    <label>How many people are attending?</label>
+    <select id="numGuests">
+      <option value="">Select...</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <div id="guestFields"></div>
+  </div>
+
   <button type="submit">Submit RSVP</button>
+</form>
   
-  </form>
-  
-  <p id="thankyou" style="display:none; font-weight:bold; color:#b07a56;">
-  Thank you! Your RSVP has been submitted 💛
-  </p>
-  
+<p id="thankyou" style="display:none; font-weight:bold; color:#b07a56;">
+Thank you! Your RSVP has been submitted 💛
+</p>
+
   </div>
   
   <footer>© 2026 Josh & Julia</footer>
@@ -103,37 +115,3 @@ button:hover { background:#8f6044; }
   </body>
   </html>
   
-  <form id="rsvpForm">
-    <label>Your Name</label>
-    <input type="text" id="mainGuestName" required>
-  
-    <label>Will you be attending?</label>
-    <div>
-      <input type="radio" name="attending" value="Yes" id="attendingYes" required>
-      <label for="attendingYes">Yes, we’ll attend</label>
-    </div>
-    <div>
-      <input type="radio" name="attending" value="No" id="attendingNo">
-      <label for="attendingNo">No, we cannot attend</label>
-    </div>
-  
-    <div id="guestSection" style="display:none;">
-      <label>How many people are attending?</label>
-      <select id="numGuests">
-        <option value="">Select...</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-  
-      <div id="guestFields"></div>
-    </div>
-  
-    <button type="submit">Submit RSVP</button>
-  </form>
-  
-  <div id="thankyou" style="display:none;">
-    <h2>Thank you for your response!</h2>
-  </div>
