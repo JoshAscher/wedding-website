@@ -1,3 +1,6 @@
+
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +14,9 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="timeline.html">Weekend Timeline</a>
-      <!--<a href="accommodation.html">Accommodation</a>
+      <a href="accommodation.html">Accommodation</a>
       <a href="travel.html">How to Get There</a>
-      <a href="things-to-do.html">What to Do</a>-->
+      <a href="things-to-do.html">What to Do</a>
       <a href="faq.html">FAQ</a>
       <a href="registry.html">Registry</a>
       <a href="rsvp.html">RSVP</a>
@@ -28,5 +31,93 @@
   <footer>
     <p>© 2026 Josh & Julia</p>
   </footer>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSVP — Josh & Julia</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.guest-box {
+  border: 1px solid #e5d7c6;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  background: #fffdf9;
+}
+
+label { display:block; margin-top:10px; }
+input, select, textarea {
+  width:100%;
+  padding:8px;
+  margin-top:5px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+button {
+  margin-top:20px;
+  padding:12px 20px;
+  background:#b07a56;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:1em;
+  cursor:pointer;
+}
+
+button:hover { background:#8f6044; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="timeline.html">Weekend Timeline</a>
+    <a href="faq.html">FAQ</a>
+    <a href="registry.html">Registry</a>
+    <a href="rsvp.html">RSVP</a>
+  </nav>
+</header>
+
+<div class="container">
+<h1>RSVP</h1>
+
+<form id="rsvpForm">
+
+<label>How many people are attending?</label>
+<select id="numGuests" required>
+  <option value="">Select...</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="5">6</option>
+</select>
+
+<div id="guestFields"></div>
+
+<button type="submit">Submit RSVP</button>
+
+</form>
+
+<p id="thankyou" style="display:none; font-weight:bold; color:#b07a56;">
+Thank you! Your RSVP has been submitted 💛
+</p>
+
+</div>
+
+<footer>© 2026 Josh & Julia</footer>
+
+<script src="rsvp.js"></script>
 </body>
 </html>
