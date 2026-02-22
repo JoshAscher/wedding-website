@@ -46,7 +46,6 @@ numGuestsSelect.addEventListener("change", () => {
         <option value="Meat">Braised beef brisket</option>
         <option value="Fish">Glazed salmon</option>
         <option value="Vegan">Pumpkin croquettes</option>
-        <option value="Kid's meal">Kid's meal (ages 0-10): Chicken fingers</option>
       </select>
       <label>Allergies</label>
       <input type="text" name="allergy${i}">
