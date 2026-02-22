@@ -55,11 +55,10 @@ button {
 
 button:hover { background:#8f6044; }
 
-.attend-option input[type="radio"] {
-  order: 2;  /* move radio after the label text */
-}
-.attend-option label {
-  order: 1;
+.attend-option {
+  display: flex;         /* make it a flex container */
+  align-items: center;   /* vertically center radio and text */
+  gap: 8px;              /* space between text and radio */
 }
 </style>
 </head>
@@ -123,4 +122,3 @@ Thank you! Your RSVP has been submitted 💛
   <script src="rsvp.js"></script>
   </body>
   </html>
-  
