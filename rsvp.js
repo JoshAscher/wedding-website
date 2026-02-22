@@ -43,9 +43,10 @@ numGuestsSelect.addEventListener("change", () => {
       <label>Meal Choice</label>
       <select name="meal${i}" required>
         <option value="">Select...</option>
-        <option value="Meat">Meat</option>
-        <option value="Fish">Fish</option>
-        <option value="Vegetarian">Vegetarian</option>
+        <option value="Meat">Braised beef brisket</option>
+        <option value="Fish">Glazed salmon</option>
+        <option value="Vegan">Pumpkin croquettes</option>
+        <option value="Kid's meal">Kid's meal (ages 0-10): Chicken fingers</option>
       </select>
       <label>Allergies</label>
       <input type="text" name="allergy${i}">
