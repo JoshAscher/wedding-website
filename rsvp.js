@@ -45,10 +45,10 @@ numGuestsSelect.addEventListener("change", () => {
         <option value="">Select...</option>
         <option value="Meat">Braised beef brisket</option>
         <option value="Fish">Glazed salmon</option>
-        <option value="Vegan">Pumpkin croquettes</option>
+        <option value="Vegan">Pumpkin croquettes (vegetarian)</option>
         <option value="Kid's meal">Kid's meal (ages 0-10): Chicken fingers</option>
       </select>
-      <label>Allergies</label>
+      <label>Allergies or dietary restrictions</label>
       <input type="text" name="allergy${i}">
     `;
     guestFields.appendChild(div);
