@@ -16,14 +16,20 @@ const guestCountID = "entry.2939965";             // number of attending guests
 const nameIDs = ["entry.1396850333","entry.5116675","entry.1832249635","entry.1801380376","entry.20805657","entry.109624582"];
 const mealIDs = ["entry.1344606640","entry.804335858","entry.755827808","entry.1658850171","entry.1473681465","entry.240742352"];
 const allergyIDs = ["entry.1602887644","entry.1343283640","entry.618449741","entry.1095222015","entry.339899103","entry.937683075"];
+const brunchQuestion = document.getElementById("brunchQuestion");
+const brunchID = "entry.787644462";
 
 // Show/hide guest fields based on attendance
+
+
 attendingRadios.forEach(radio => {
   radio.addEventListener("change", () => {
     if (document.getElementById("attendingYes").checked) {
       guestSection.style.display = "block";
+      brunchQuestion.style.display = "block";
     } else {
       guestSection.style.display = "none";
+      brunchQuestion.style.display = "none";
       guestFields.innerHTML = "";
     }
   });
@@ -73,8 +79,17 @@ form.addEventListener("submit", e => {
       params.append(nameIDs[i-1], form[`name${i}`].value || "");
       params.append(mealIDs[i-1], form[`meal${i}`].value || "");
       params.append(allergyIDs[i-1], form[`allergy${i}`].value || "");
-    }
+    }   
+
+    const brunchChoice =
+    document.querySelector('input[name="brunch"]:checked')?.value || "";
+
+    params.append(brunchID, brunchChoice);
   }
+
+  
+
+  
 
   // Submit via invisible iframe
   const iframe = document.createElement("iframe");
